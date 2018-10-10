@@ -6,7 +6,7 @@ Content-Type,application/json
   
 body示例1（默认情况）  
 {  
-	"longUrl":"http://www.baidu.com"  
+	>"longUrl":"http://www.baidu.com"  
 }  
 返回结果  
 {  
