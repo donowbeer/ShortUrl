@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.donowbeer.shorturl.mapper.ShortedMapper">
+    <select id="selectAll" resultType="Shorted">
+        select * from shorted
+    </select>
+
+    <select id="selectOneSpecifiedByLongUrl" resultType="String">
+        select keyword from shorted where longUrl=#{longUrl}
+    </select>
+
+    <select id="selectOneSpecifiedByKeyword" resultType="String">
+        select longUrl from shorted where keyword=#{keyword}
+    </select>
+
+
+    <insert id="insertOne" parameterType="Shorted">
+        insert into shorted values(#{keyword},#{longUrl},#{type},#{createTime})
+    </insert>
+
+</mapper>

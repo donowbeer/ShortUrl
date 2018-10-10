@@ -1,0 +1,21 @@
+create database shorturl;
+use shorturl;
+
+create table shorted(
+    keyword varchar(10) primary key,
+    longUrl varchar(50) not null,
+    type int not null,
+    createTime datetime not null
+)engine=innodb default charset=utf8;
+
+insert into shorted values('abcdef','http://baidu.com',1,'2018-10-08 19:23:25');
+
+create table viewed(
+    id int not null auto_increment primary key,
+    keyword varchar(10) not null,
+    viewTime datetime not null
+)engine=innodb default charset=utf8;
+
+insert into viewed values(1,'abcdef','2018-10-08 19:23:53');
+insert into viewed values(2,'abcdef','2018-10-08 19:24:25');
+insert into viewed values(3,'abcdef','2018-10-08 19:25:21');

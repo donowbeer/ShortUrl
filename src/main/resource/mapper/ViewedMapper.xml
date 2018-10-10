@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.donowbeer.shorturl.mapper.ViewedMapper">
+    <insert id="insertOne" parameterType="Viewed">
+        insert into viewed(keyword,viewTime) values(#{keyword},#{viewTime})
+    </insert>
+
+    <select id="selectCountByKeyword" resultType="int">
+        select count(*) from viewed where keyword=#{keyword}
+    </select>
+</mapper>
