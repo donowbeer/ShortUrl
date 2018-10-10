@@ -23,7 +23,8 @@ public class ShortedController {
     @Autowired
     ViewedService viewedService;
 
-    private String host = "http://127.0.0.1:8080/";
+    private String host = "http://119.23.226.102/ShortUrl/";
+
 
 
     @RequestMapping(value = "/v1/shorted", method = RequestMethod.GET)
