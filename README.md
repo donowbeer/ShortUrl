@@ -1,12 +1,12 @@
 # ShortUrl
 
-创建短网址API http://119.23.226.102/ShortUrl/v1/create
-method:POST 
-Content-Type,application/json
-
-body示例1（默认情况）
-{
-	"longUrl":"http://www.baidu.com"
+创建短网址API http://119.23.226.102/ShortUrl/v1/create  
+method:POST  
+Content-Type,application/json  
+  
+body示例1（默认情况）  
+{  
+	"longUrl":"http://www.baidu.com"  
 }
 返回结果
 {
